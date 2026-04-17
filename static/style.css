@@ -1,0 +1,137 @@
+/* -----------------------
+   GLOBAL
+------------------------*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #e6f0ff, #f7fbff);
+}
+
+/* -----------------------
+   HEADER
+------------------------*/
+.header {
+    background: #2b6cb0;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* -----------------------
+   HERO SECTION
+------------------------*/
+.hero {
+    text-align: center;
+    padding: 20px;
+}
+
+.hero img {
+    width: 90px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero h2 {
+    color: #2b6cb0;
+    margin: 10px 0 5px;
+}
+
+.hero p {
+    color: #555;
+}
+
+/* floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* -----------------------
+   CHAT BOX
+------------------------*/
+#chat-box {
+    padding: 15px;
+    height: 55vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* -----------------------
+   MESSAGES
+------------------------*/
+.user {
+    align-self: flex-end;
+    background: #cfe2ff;
+    padding: 10px;
+    border-radius: 12px;
+    max-width: 70%;
+}
+
+.bot {
+    align-self: flex-start;
+    background: #e9f7ef;
+    padding: 10px;
+    border-radius: 12px;
+    max-width: 70%;
+}
+
+/* -----------------------
+   INPUT BOX
+------------------------*/
+.input-box {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    background: white;
+    border-top: 1px solid #ccc;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-left: 10px;
+    padding: 12px 18px;
+    background: #2b6cb0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+/* -----------------------
+   BOT WELCOME ANIMATION
+------------------------*/
+.bot {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.user {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* -----------------------
+   SCROLLBAR
+------------------------*/
+#chat-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+#chat-box::-webkit-scrollbar-thumb {
+    background: #2b6cb0;
+    border-radius: 10px;
+}

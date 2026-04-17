@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Medical Assistant</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    🩺 AI Medical Assistant
+</div>
+
+<!-- HERO SECTION -->
+<div class="hero">
+    <img src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png" />
+    <h2>Smart Medical Chatbot</h2>
+    <p>Describe your symptoms and get instant guidance</p>
+</div>
+
+<!-- CHAT BOX -->
+<div id="chat-box">
+
+    <!-- Bot welcome message -->
+    <div class="bot">
+        🤖 Hello! I am your medical assistant. How can I help you today?
+    </div>
+
+</div>
+
+<!-- INPUT (FORM BASED - NO JS) -->
+<form class="input-box" action="/chat" method="POST">
+    <input type="text" name="message" placeholder="Describe your symptoms..." required>
+    <button type="submit">Send</button>
+</form>
+
+</body>
+</html>
